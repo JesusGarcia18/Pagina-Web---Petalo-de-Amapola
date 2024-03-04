@@ -8,32 +8,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petalo de Amapola - Inicio</title>
-    <style>
-        body {
-            background-color: beige;
-        }
-    </style>
     <div class="w3-bar w3-blue-grey">
         <a class="w3-bar-item w3-mobile w3-pink w3-padding-16">Petalo de Amapola</a>
         <div class="w3-dropdown-hover w3-mobile">
           <button class="w3-button w3-padding-16">Productos <i class="fa fa-caret-down"></i></button>
           <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
-            <a href="Productos.html" class="w3-bar-item w3-button w3-mobile">Maquillaje</a>
+            <a href="Productos.html #Maquillaje" class="w3-bar-item w3-button w3-mobile">Maquillaje</a>
             <a href="Productos.html" class="w3-bar-item w3-button w3-mobile">Pestañas</a>
             <a href="#" class="w3-bar-item w3-button w3-mobile">Perfumes</a>
             <a href="#" class="w3-bar-item w3-button w3-mobile">Cuidado Personal</a>
             <a href="#" class="w3-bar-item w3-button w3-mobile">Cuidado Capilar</a>
           </div>
         </div>
-        <input type="text" class="w3-bar-item w3-input w3-padding-16" placeholder="Busca tu producto aqui..">
-        <a href="#" class="w3-bar-item w3-button w3-pink w3-center w3-padding-16"><i class="fa fa-search fa-fw"></i></a>
+        <input type="text" id="search" class="w3-bar-item w3-input w3-padding-16" placeholder="Busca tu producto aqui..">
+        <input type="image" class="w3-bar-item w3-button w3-pink w3-center w3-padding-16" onclick="location.href='Productos.html'" src="img/Buscar.png" alt="Buscar" style="width: 55px;">
         <a href="Registro.html" class="w3-bar-item w3-button w3-mobile w3-right w3-round-large w3-padding-16">Registrate/Accede <i class="fa fa-id-card fa-fw"></i></button>
         <a href="Carrito de Compras.html" class="w3-bar-item w3-button w3-mobile w3-right w3-padding-16">Carrito <i class="fa fa-cart-arrow-down fa-fw"></i></a>
     </div>
 </head>
 
-<body>
-<br>
+<body class="w3-sand">
+&nbsp;
+    <div class="toast fade show m-2" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-body lead">
+        Registrate para recibir correos con notificaciones y poder seguir tus compras
+        <div class="mt-2 pt-2 border-top">
+            <button type="button" class="btn w3-pink btn-sm" onclick="location.href='Registro.html'">Registrarme</button>
+            <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">Despues</button>
+        </div>
+        </div>
+    </div>
+&nbsp;
     <div class="w3-container w3-cursive w3-pink w3-center w-50 p-3 mx-auto">
         <h3>Nuevos Productos!</h3>
     </div>
@@ -77,5 +82,105 @@
             </button>
         </div>
     </div>
+    &nbsp;
+    <div class="w3-container w3-cursive w3-pink w3-center w-50 p-3 mx-auto">
+        <h3>Consejos de temporada...</h3>
+    </div>
+    <div class="w3-container w3-blue-grey w-50 p-3 mx-auto">
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed w3-pink" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  Dale la Bienvenida a la primavera con estos tips de maquillaje...
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body lead w3-sand">
+                  Aquí tienes algunos consejos de maquillaje para la temporada de primavera que te ayudarán a lucir fresca y radiante...
+                  <br>
+                  <strong>Jugosa:</strong><br>
+                  Prioriza el cuidado de la piel para lograr un cutis saludable y luminoso.<br>
+                  Utiliza productos ligeros y poco cubrientes, como una BB cream, en lugar de bases pesadas.<br>
+                  Apuesta por productos que aporten luminosidad y brillo.<br>
+                  <strong>en Crema:</strong><br>
+                  Para un efecto de piel jugosa, el bronceador en crema es imprescindible.<br>
+                  Se ha convertido en un “must-have” para conseguir un resultado natural y radiante.<br>
+                  <strong>Efecto Lifting:</strong><br>
+                  Aplica los productos en sentido ascendente para “elevar” tus rasgos.<br>
+                  Esto crea un efecto lifting y realza tus facciones.<br>
+                  <strong>Glass Skin o Piel de Cristal:</strong><br>
+                  Busca una piel luminosa y transparente.<br>
+                  Utiliza iluminadores sutiles para lograr ese efecto "piel de cristal".<br>
+                  <strong>Labios Nude:</strong><br>
+                  Opta por tonos neutros en los labios para un look fresco y natural.<br>
+                  Los colores nude y rosa pastel serán protagonistas esta temporada.<br>
+                  <strong>Perfilador y Gloss:</strong><br>
+                  Define tus labios con un perfilador y añade un toque de gloss para un acabado jugoso.<br>
+                  <strong>Eyeliner Geométrico:</strong><br>
+                  Experimenta con delineados geométricos en los ojos.<br>
+                  Puedes jugar con diferentes formas y colores para darle un toque moderno a tu maquillaje<br>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed w3-pink" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Que tu piel no este indefensa para estos rayos de sol primaverales...
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body lead w3-sand">
+                    Aquí tienes algunos consejos de cuidado de la piel para la primavera que te ayudarán a mantener una piel radiante y saludable...<br>
+                    <strong>Hidratación y Protección Solar:</strong><br>
+                    A medida que suben las temperaturas, es crucial mantener la piel hidratada. Bebe suficiente agua y utiliza una crema hidratante ligera.<br>
+                    No olvides aplicar protector solar todos los días, incluso en días nublados. La protección solar es esencial para prevenir el daño causado por los rayos UV.<br>
+                    <strong>Exfoliación Suave:</strong><br>
+                    Exfoliar la piel una o dos veces por semana ayudará a eliminar las células muertas y a mantenerla limpia y fresca.<br>
+                    Opta por exfoliantes suaves para evitar irritaciones.<br>
+                    <strong>Limpieza Diaria:</strong><br>
+                    Limpia tu rostro diariamente para eliminar el exceso de grasa, el sudor y las impurezas.<br>
+                    Utiliza un limpiador suave y adecuado para tu tipo de piel.<br>
+                    <strong>Cuidado de los Labios:</strong><br>
+                    Los labios también necesitan atención. Utiliza un bálsamo labial hidratante para evitar que se resequen.<br>
+                    Exfolia tus labios suavemente con un cepillo de dientes para eliminar la piel seca.<br>
+                    <strong>Alimentación Saludable:</strong><br>
+                    Recuerda que la piel refleja lo que comes. Una dieta equilibrada y rica en nutrientes se traducirá en una piel más luminosa.<br>
+                    Consume alimentos ricos en antioxidantes, como frutas y verduras.<br>
+                    <strong>Cuidado de las Manos y Uñas:</strong><br>
+                    Hidrata tus manos con una crema específica para manos.<br>
+                    Mantén tus uñas limpias y bien cuidadas para evitar que se quiebren o se debiliten.<br>
+                    <strong>Descanso y Estrés:</strong><br>
+                    Duerme lo suficiente para permitir que la piel se regenere durante la noche.<br>
+                    Controla el estrés, ya que puede afectar negativamente la salud de la piel<br>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed w3-pink" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Manten tu cabello sano para estos calores...
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body lead w3-sand">
+                    Aquí tienes algunos consejos para cuidar tu cabello durante la primavera y mantenerlo saludable y radiante...<br>
+                    <strong>Sigue una Dieta Equilibrada:</strong><br>
+                    Evita los déficits nutricionales para mantener el pelo sano.<br>
+                    Incorpora alimentos ricos en nutrientes como huevos y frutos secos para frenar la caída del cabello.<br>
+                    <strong>Controla el Estrés:</strong><br>
+                    El estrés y la caída del cabello están relacionados.<br>
+                    Evita los picos de estrés prolongados, ya que pueden afectar la salud capilar.<br>
+                    <strong>Productos Capilares Específicos:</strong><br>
+                    Utiliza productos capilares adecuados para tu tipo de cabello.<br>
+                    Escoge aquellos que se ajusten a tus necesidades y fomenten la calidad del pelo.<br>
+                    <strong>Tratamientos Capilares de Mantenimiento:</strong><br>
+                    Considera tratamientos capilares para fortalecer y nutrir tu cabello.<br>
+                    Mantén una rutina regular para mantener su salud y apariencia<br>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    &nbsp;
 </body>
 </html>
