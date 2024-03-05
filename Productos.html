@@ -33,7 +33,7 @@
         <input type="image" class="w3-bar-item w3-button w3-pink w3-center w3-padding-16" onclick="location.href='Productos.html'" src="img/Buscar.png" alt="Buscar" style="width: 55px;">
         <a href="Registro.html" class="w3-bar-item w3-button w3-mobile w3-right w3-round-large w3-padding-16">Registrate/Accede <i class="fa fa-id-card fa-fw"></i></a>
         
-        <button class="btn w3-blue-grey w3-padding-16 w3-right" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa fa-shopping-cart fa-fw"></i>
+        <button class="btn w3-blue-grey w3-padding-16 w3-right container-principal" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa fa-shopping-cart fa-fw"></i>
           <span class="badge text-black bg-white contador-productos">0</span></button>
         <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
           <div class="offcanvas-header">
@@ -41,23 +41,28 @@
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
-            <ul class="carrito">
-              <div class="row row-producto">
-                <li class="w3-bar producto-carrito w3-border-top w3-border-bottom w3-border-pink">
+            <ul class="carrito hidden-cart">
+              <div class="row row-producto hidden">
+                <li class="w3-bar producto-carrito">
                 <span onclick="this.parentElement.style.display='none'"
-                  class="w3-bar-item w3-button w3-xlarge w3-right close">&times;</span>
+                  class="w3-bar-item w3-button w3-xlarge w3-right close"></span>
                   <div class="w3-bar-item info-producto">
-                      <span class="cantidad">1</span>
-                      <span class="producto">Pestañas</span>
-                      <span class="precio">$80.00</span>
+                      <span class="cantidad"></span>
+                      <span class="producto"></span>
+                      <span class="precio"></span>
                   </div>
                 </li>
               </div>
-              <div class="total mw-100 p-2">
+              <div class="cart-total mw-100 p-2 hidden">
                 <h4>Total:</h4>
-                <span class="total-pagar">$90.00</span>
+                <span class="total-pagar"></span>
               </div>
+              <p class="cart-empty">El carrito esta vacio</p>
             </ul>
+            <div class="mx-auto w3-center mt-4">
+              <button type="button" class="w3-button w3-pink w3-center w3-disabled" disabled>Pagar</button>
+              <a href="Pago.html" class="w3-button w3-mobile w3-pink">Agrega un metodo de pago</a>
+            </div>
           </div>
         </div>
 

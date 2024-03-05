@@ -1,6 +1,10 @@
 const btnCart = document.querySelector('.container-principal')
 const carrito = document.querySelector('.carrito')
 
+btnCart.addEventListener('click', () => {
+	carrito.classList.toggle('hidden-cart');
+});
+
 
 const cartInfo = document.querySelector('.producto-carrito');
 const rowProducto = document.querySelector('.row-producto');
@@ -18,12 +22,12 @@ const cartTotal = document.querySelector('.cart-total');
 productosLista.addEventListener('click', e => {
 
     if(e.target.classList.contains('btn-producto')){
-        const producto = e.target.parentElement
+        const product = e.target.parentElement
 
         const infoProducto = {
             quantity: 1,
-            title: producto.querySelector('h4').textContent,
-            price: producto.querySelector('.precio').textContent,
+            title: product.querySelector('h4').textContent,
+            price: product.querySelector('.precio').textContent,
         }
 
         const exist = allProductos.some(product => product.title === infoProducto.title)
@@ -52,7 +56,7 @@ rowProducto.addEventListener('click', e => {
 		const title = product.querySelector('p').textContent;
 
 		allProductos = allProductos.filter(
-			product => product.title !== title
+			producto => producto.title !== title
 		);
 
 		showHTML();
@@ -62,9 +66,13 @@ rowProducto.addEventListener('click', e => {
 const showHTML = () => {
 
     if(!allProductos.length){
-        carrito.innerHTML=`
-            <p class="w3-panel m-2">El carrito esta vacio</p>
-        `
+        cartEmpty.classList.remove('hidden');
+		rowProducto.classList.add('hidden');
+		cartTotal.classList.add('hidden');
+    } else {
+        cartEmpty.classList.add('hidden');
+		rowProducto.classList.remove('hidden');
+		cartTotal.classList.remove('hidden');
     }
 
 
@@ -92,8 +100,8 @@ const showHTML = () => {
 
         total = total + parseInt(product.quantity * product.price.slice(1));
         totalOfProducts = totalOfProducts + product.quantity;
-    })
+    });
 
     valorTotal.innerText = `$${total}`;
     countProducts.innerText = totalOfProducts;
-}
+};
