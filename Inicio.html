@@ -20,8 +20,10 @@
             <a href="#" class="w3-bar-item w3-button w3-mobile">Cuidado Capilar</a>
           </div>
         </div>
-        <input type="text" id="search" class="w3-bar-item w3-input w3-padding-16" placeholder="Busca tu producto aqui..">
-        <input type="image" class="w3-bar-item w3-button w3-pink w3-center w3-padding-16" onclick="location.href='Productos.html'" src="img/Buscar.png" alt="Buscar" style="width: 55px;">
+        <form role="search" onsubmit="return buscar()">
+          <input type="text" id="search" class="w3-bar-item w3-input w3-padding-16" placeholder="Busca tu producto aqui..">
+          <input type="image" class="w3-bar-item w3-button w3-pink w3-center w3-padding-16" src="img/Buscar.png" alt="Buscar" style="width: 55px;">
+        </form>
         <a href="Registro.html" class="w3-bar-item w3-button w3-mobile w3-right w3-round-large w3-padding-16">Registrate/Accede <i class="fa fa-id-card fa-fw"></i></a>
     </div>
 </head>
@@ -181,5 +183,6 @@
           </div>
     </div>
     &nbsp;
+    <script src="busqueda.js"></script>
 </body>
 </html>
